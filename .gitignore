@@ -18,7 +18,6 @@
 
 
 vendor/bundle
-/bin/*
 .DS_Store
 .idea
 .rspec
