@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const webpackRailsI18nJS = require('webpack-rails-i18n-js-plugin');
 const devSrvPort = 3001;
 
 module.exports = {
@@ -41,11 +42,10 @@ module.exports = {
         //         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
         //     }
         // }),
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            compress: {
-                warnings: false
-            }
+        new webpackRailsI18nJS({
+            locale: 'html.lang',
+            defaultLocale: 'en',
+            localesPath: path.join(__dirname, 'config/locales')
         }),
         new webpack.ProvidePlugin({
             riot: 'riot'

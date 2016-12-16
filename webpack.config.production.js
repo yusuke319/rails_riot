@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const webpackRailsI18nJS = require('webpack-rails-i18n-js-plugin');
+const manifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
@@ -45,7 +46,12 @@ module.exports = {
                 warnings: false
             }
         }),
-        new ManifestPlugin(),
+        new manifestPlugin(),
+        new webpackRailsI18nJS({
+            locale: 'html.lang',
+            defaultLocale: 'en',
+            localesPath: path.join(__dirname, 'config/locales')
+        }),
         new webpack.ProvidePlugin({
             riot: 'riot'
         })
