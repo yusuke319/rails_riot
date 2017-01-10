@@ -1,0 +1,28 @@
+.c-holyGrail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.c-holyGrail__header {
+}
+
+.c-holyGrail__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.c-holyGrail__sidebar {
+  @include bs-bp-md-min() {
+    flex: 0 0 12em;
+  }
+}
+
+.c-holyGrail__content {
+  flex: 1;
+}
+
+.c-holyGrail__footer {
+}

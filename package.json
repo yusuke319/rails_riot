@@ -28,6 +28,7 @@
     "obseriot": "^0.3.3",
     "riot": "^3.0.2",
     "riot-observable": "^3.0.0",
+    "sass-basis": "^5.5.1",
     "webpack-rails-i18n-js-plugin": "^1.3.0"
   }
 }
